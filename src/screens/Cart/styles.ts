@@ -1,13 +1,8 @@
 import { StyleSheet } from "react-native";
 import { ThemeColors } from "../../types";
 
-/**
- * Create styles for Cart Screen with modern shopping app design
- * @param colors - Theme colors object
- */
 export const createStyles = (colors: ThemeColors) =>
   StyleSheet.create({
-    // ===== CONTAINER =====
     container: {
       flex: 1,
       backgroundColor: colors.background,
@@ -33,16 +28,7 @@ export const createStyles = (colors: ThemeColors) =>
       paddingTop: 16,
       paddingBottom: 12,
     },
-    backButton: {
-      width: 44,
-      height: 44,
-      borderRadius: 22,
-      backgroundColor: colors.background,
-      justifyContent: "center",
-      alignItems: "center",
-      borderWidth: 1,
-      borderColor: colors.border,
-    },
+
     headerTitle: {
       fontSize: 22,
       fontWeight: "bold",
@@ -56,6 +42,10 @@ export const createStyles = (colors: ThemeColors) =>
       backgroundColor: colors.background,
       borderWidth: 1,
       borderColor: colors.danger,
+    },
+    clearButtonPressed: {
+      opacity: 0.7,
+      transform: [{ scale: 0.97 }],
     },
     clearButtonText: {
       color: colors.danger,
@@ -73,6 +63,63 @@ export const createStyles = (colors: ThemeColors) =>
       fontSize: 14,
       color: colors.textSecondary,
       fontWeight: "500",
+    },
+
+    // ===== SELECTION ACTIONS =====
+    selectionActionsContainer: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: 20,
+      paddingTop: 12,
+    },
+    selectAllButton: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 10,
+      paddingVertical: 8,
+    },
+    selectAllButtonPressed: {
+      opacity: 0.7,
+    },
+    selectAllCheckbox: {
+      width: 24,
+      height: 24,
+      borderRadius: 6,
+      borderWidth: 2,
+      borderColor: colors.border,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: colors.background,
+    },
+    selectAllCheckboxSelected: {
+      backgroundColor: colors.primary,
+      borderColor: colors.primary,
+    },
+    selectAllText: {
+      fontSize: 14,
+      fontWeight: "600",
+      color: colors.text,
+    },
+    deleteSelectedButton: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+      borderRadius: 10,
+      backgroundColor: colors.background,
+      borderWidth: 1,
+      borderColor: colors.danger,
+    },
+    deleteSelectedButtonPressed: {
+      opacity: 0.7,
+      transform: [{ scale: 0.97 }],
+    },
+    deleteSelectedText: {
+      fontSize: 13,
+      fontWeight: "600",
+      color: colors.danger,
     },
 
     // ===== LIST =====
@@ -100,10 +147,46 @@ export const createStyles = (colors: ThemeColors) =>
     cartItemRemoving: {
       opacity: 0.5,
     },
+    cartItemSelected: {
+      borderColor: colors.primary,
+      borderWidth: 2,
+    },
+    cartItemPressed: {
+      opacity: 0.9,
+    },
+
+    // ===== CHECKBOX =====
+    checkbox: {
+      width: 28,
+      height: 28,
+      borderRadius: 7,
+      borderWidth: 2,
+      borderColor: colors.border,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: colors.background,
+      marginRight: 12,
+      alignSelf: "center",
+    },
+    checkboxSelected: {
+      backgroundColor: colors.primary,
+      borderColor: colors.primary,
+    },
+    checkboxPressed: {
+      transform: [{ scale: 0.95 }],
+    },
 
     // ===== ITEM IMAGE =====
     itemImageContainer: {
       marginRight: 12,
+      borderRadius: 16,
+      overflow: "hidden",
+      backgroundColor: colors.background,
+    },
+    itemImage: {
+      width: 90,
+      height: 90,
+      borderRadius: 16,
     },
     itemImagePlaceholder: {
       width: 90,
@@ -170,6 +253,9 @@ export const createStyles = (colors: ThemeColors) =>
     quantityButtonDisabled: {
       opacity: 0.4,
     },
+    quantityButtonPressed: {
+      transform: [{ scale: 0.95 }],
+    },
     quantityDisplay: {
       minWidth: 40,
       paddingHorizontal: 12,
@@ -185,8 +271,6 @@ export const createStyles = (colors: ThemeColors) =>
       fontWeight: "bold",
       color: colors.text,
     },
-
-    // ===== ITEM TOTAL =====
     itemTotalContainer: {
       alignItems: "flex-end",
     },
@@ -210,6 +294,10 @@ export const createStyles = (colors: ThemeColors) =>
       height: 32,
       justifyContent: "center",
       alignItems: "center",
+    },
+    removeButtonPressed: {
+      opacity: 0.6,
+      transform: [{ scale: 0.9 }],
     },
 
     // ===== EMPTY STATE =====
@@ -251,6 +339,10 @@ export const createStyles = (colors: ThemeColors) =>
       shadowOpacity: 0.2,
       shadowRadius: 6,
     },
+    shopButtonPressed: {
+      opacity: 0.9,
+      transform: [{ scale: 0.98 }],
+    },
     shopButtonText: {
       color: "#FFFFFF",
       fontSize: 16,
@@ -272,6 +364,25 @@ export const createStyles = (colors: ThemeColors) =>
       shadowRadius: 8,
       borderWidth: 1,
       borderColor: colors.border,
+    },
+
+    // ===== SELECTED INFO =====
+    selectedInfoContainer: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 10,
+      backgroundColor: colors.success + "15",
+      padding: 12,
+      borderRadius: 12,
+      marginBottom: 16,
+      borderWidth: 1,
+      borderColor: colors.success + "30",
+    },
+    selectedInfoText: {
+      flex: 1,
+      fontSize: 14,
+      color: colors.success,
+      fontWeight: "600",
     },
 
     // ===== PRICE BREAKDOWN =====
@@ -367,6 +478,14 @@ export const createStyles = (colors: ThemeColors) =>
       shadowOpacity: 0.3,
       shadowRadius: 6,
       marginBottom: 12,
+    },
+    checkoutButtonDisabled: {
+      backgroundColor: colors.textSecondary,
+      opacity: 0.5,
+    },
+    checkoutButtonPressed: {
+      opacity: 0.9,
+      transform: [{ scale: 0.98 }],
     },
     checkoutButtonText: {
       color: "#FFFFFF",

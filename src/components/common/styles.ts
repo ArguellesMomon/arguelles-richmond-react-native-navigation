@@ -1,0 +1,173 @@
+import { StyleSheet } from "react-native";
+import { ThemeColors } from "../../types";
+
+export const createStyles = (colors: ThemeColors, isSearchActive: boolean = false) =>
+  StyleSheet.create({
+    container: {
+      flexDirection: "row",
+      alignItems: "center",
+      backgroundColor: colors.background,
+      borderRadius: 16,
+      paddingHorizontal: 16,
+      paddingVertical: 12,
+      borderWidth: isSearchActive ? 2 : 1,
+      borderColor: isSearchActive ? colors.primary : colors.border,
+    },
+    searchIcon: {
+      marginRight: 8,
+    },
+    input: {
+      flex: 1,
+      fontSize: 15,
+      color: colors.text,
+      padding: 0,
+    },
+    placeholder: {
+      flex: 1,
+      fontSize: 15,
+      color: colors.textSecondary,
+    },
+    clearButton: {
+      marginRight: 8,
+      padding: 4,
+    },
+    filterButton: {
+      width: 36,
+      height: 36,
+      borderRadius: 10,
+      backgroundColor: colors.card,
+      justifyContent: "center",
+      alignItems: "center",
+      borderWidth: 1,
+      borderColor: colors.primary,
+    },
+    filterButtonActive: {
+      backgroundColor: colors.primary,
+    },
+
+    // Modal Styles
+    modalOverlay: {
+      flex: 1,
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      justifyContent: "flex-end",
+    },
+    modalContent: {
+      backgroundColor: colors.card,
+      borderTopLeftRadius: 24,
+      borderTopRightRadius: 24,
+      paddingTop: 20,
+      paddingBottom: 40,
+      paddingHorizontal: 20,
+      maxHeight: "80%",
+    },
+    modalHandle: {
+      width: 40,
+      height: 4,
+      backgroundColor: colors.border,
+      borderRadius: 2,
+      alignSelf: "center",
+      marginBottom: 20,
+    },
+    modalHeader: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: 24,
+    },
+    modalTitle: {
+      fontSize: 22,
+      fontWeight: "bold",
+      color: colors.text,
+    },
+    resetButton: {
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+      borderRadius: 8,
+      backgroundColor: colors.background,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    resetButtonText: {
+      fontSize: 14,
+      color: colors.primary,
+      fontWeight: "600",
+    },
+    sectionTitle: {
+      fontSize: 16,
+      fontWeight: "bold",
+      color: colors.text,
+      marginBottom: 12,
+      marginTop: 8,
+    },
+    optionItem: {
+      flexDirection: "row",
+      alignItems: "center",
+      backgroundColor: colors.background,
+      padding: 16,
+      borderRadius: 12,
+      marginBottom: 8,
+      borderWidth: 2,
+      borderColor: colors.border,
+    },
+    optionItemSelected: {
+      borderColor: colors.primary,
+      backgroundColor: colors.background,
+    },
+    optionIcon: {
+      width: 40,
+      height: 40,
+      borderRadius: 20,
+      backgroundColor: colors.card,
+      justifyContent: "center",
+      alignItems: "center",
+      marginRight: 12,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    optionIconSelected: {
+      backgroundColor: colors.primary,
+      borderColor: colors.primary,
+    },
+    optionLabel: {
+      flex: 1,
+      fontSize: 15,
+      color: colors.text,
+      fontWeight: "500",
+    },
+    radioButton: {
+      width: 24,
+      height: 24,
+      borderRadius: 12,
+      borderWidth: 2,
+      borderColor: colors.border,
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    radioButtonSelected: {
+      borderColor: colors.primary,
+    },
+    radioButtonInner: {
+      width: 12,
+      height: 12,
+      borderRadius: 6,
+      backgroundColor: colors.primary,
+    },
+    applyButton: {
+      backgroundColor: colors.primary,
+      paddingVertical: 16,
+      borderRadius: 16,
+      alignItems: "center",
+      marginTop: 24,
+      elevation: 4,
+      shadowColor: colors.shadow,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.2,
+      shadowRadius: 6,
+    },
+    applyButtonText: {
+      color: "#FFFFFF",
+      fontSize: 16,
+      fontWeight: "bold",
+      letterSpacing: 0.5,
+    },
+  });
