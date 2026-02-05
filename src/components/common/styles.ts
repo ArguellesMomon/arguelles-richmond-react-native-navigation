@@ -6,7 +6,7 @@ export const createStyles = (colors: ThemeColors, isSearchActive: boolean = fals
     container: {
       flexDirection: "row",
       alignItems: "center",
-      backgroundColor: colors.background,
+      backgroundColor: colors.card,
       borderRadius: 16,
       paddingHorizontal: 16,
       paddingVertical: 12,
@@ -83,7 +83,7 @@ export const createStyles = (colors: ThemeColors, isSearchActive: boolean = fals
       paddingHorizontal: 12,
       paddingVertical: 6,
       borderRadius: 8,
-      backgroundColor: colors.background,
+      backgroundColor: colors.card,
       borderWidth: 1,
       borderColor: colors.border,
     },
@@ -126,7 +126,7 @@ export const createStyles = (colors: ThemeColors, isSearchActive: boolean = fals
     },
     optionIconSelected: {
       backgroundColor: colors.primary,
-      borderColor: colors.primary,
+      borderColor: colors.card,
     },
     optionLabel: {
       flex: 1,
@@ -144,13 +144,13 @@ export const createStyles = (colors: ThemeColors, isSearchActive: boolean = fals
       alignItems: "center",
     },
     radioButtonSelected: {
-      borderColor: colors.primary,
+      borderColor: colors.card,
     },
     radioButtonInner: {
       width: 12,
       height: 12,
       borderRadius: 6,
-      backgroundColor: colors.primary,
+      backgroundColor: colors.card,
     },
     applyButton: {
       backgroundColor: colors.primary,

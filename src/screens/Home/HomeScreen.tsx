@@ -155,7 +155,7 @@ export default function HomeScreen({ navigation }: any) {
               <Ionicons
                 name={isDark ? "sunny" : "moon"}
                 size={24}
-                color={colors.text}
+                color={colors.shadow}
               />
             </Pressable>
 

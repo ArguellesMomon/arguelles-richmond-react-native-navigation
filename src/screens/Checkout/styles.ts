@@ -29,20 +29,7 @@ export const createStyles = (colors: ThemeColors) =>
       shadowOpacity: 0.1,
       shadowRadius: 8,
     },
-    backButton: {
-      width: 44,
-      height: 44,
-      borderRadius: 22,
-      backgroundColor: colors.background,
-      justifyContent: "center",
-      alignItems: "center",
-      borderWidth: 1,
-      borderColor: colors.border,
-    },
-    backButtonPressed: {
-      opacity: 0.7,
-      transform: [{ scale: 0.95 }],
-    },
+    
     headerTitle: {
       fontSize: 22,
       fontWeight: "bold",
@@ -197,7 +184,7 @@ export const createStyles = (colors: ThemeColors) =>
     inputContainer: {
       flexDirection: "row",
       alignItems: "center",
-      backgroundColor: colors.background,
+      backgroundColor: colors.card,
       borderRadius: 12,
       paddingHorizontal: 16,
       paddingVertical: 12,
@@ -283,30 +270,30 @@ export const createStyles = (colors: ThemeColors) =>
     paymentTitle: {
       fontSize: 16,
       fontWeight: "bold",
-      color: colors.text,
+      color: colors.card,
       marginBottom: 4,
     },
     paymentSubtitle: {
       fontSize: 13,
-      color: colors.textSecondary,
+      color: colors.card,
     },
     radioButton: {
       width: 24,
       height: 24,
       borderRadius: 12,
-      borderWidth: 2,
+      borderWidth: 1,
       borderColor: colors.border,
       justifyContent: "center",
       alignItems: "center",
     },
     radioButtonSelected: {
-      borderColor: colors.primary,
+      borderColor: colors.shadow,
     },
     radioButtonInner: {
       width: 12,
       height: 12,
       borderRadius: 6,
-      backgroundColor: colors.primary,
+      backgroundColor: colors.shadow,
     },
 
     // ===== TERMS =====

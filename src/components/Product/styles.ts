@@ -144,7 +144,7 @@ export const createStyles = (colors: ThemeColors) =>
     price: {
       fontSize: 32,
       fontWeight: "bold",
-      color: colors.primary,
+      color: colors.shadow,
     },
     descriptionSection: {
       marginBottom: 16,
@@ -178,13 +178,13 @@ export const createStyles = (colors: ThemeColors) =>
       width: 36,
       height: 36,
       borderRadius: 18,
-      backgroundColor: colors.primary + "20",
+      backgroundColor: colors.primaryDark,
       justifyContent: "center",
       alignItems: "center",
     },
     featureText: {
       fontSize: 14,
-      color: colors.text,
+      color: colors.shadow,
       flex: 1,
       fontWeight: "500",
     },
@@ -230,7 +230,7 @@ export const createStyles = (colors: ThemeColors) =>
     quantityContainer: {
       flexDirection: "row",
       alignItems: "center",
-      backgroundColor: colors.background,
+      backgroundColor: colors.card,
       borderRadius: 12,
       borderWidth: 1,
       borderColor: colors.border,

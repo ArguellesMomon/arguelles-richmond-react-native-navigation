@@ -373,7 +373,7 @@ export default function CartScreen({ navigation }: any) {
                 ]}
                 onPress={handleDeleteSelected}
               >
-                <Ionicons name="trash-outline" size={18} color={colors.danger} />
+                <Ionicons name="trash-outline" size={18} color={colors.shadow} />
                 <Text style={styles.deleteSelectedText}>Delete ({selectedItems.size})</Text>
               </Pressable>
             )}

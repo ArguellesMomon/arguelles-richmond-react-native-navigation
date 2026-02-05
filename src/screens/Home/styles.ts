@@ -36,7 +36,7 @@ export const createStyles = (colors: ThemeColors) =>
     title: {
       fontSize: 28,
       fontWeight: "bold",
-      color: colors.text,
+      color: colors.primary,
     },
     headerRight: {
       flexDirection: "row",
@@ -89,12 +89,12 @@ export const createStyles = (colors: ThemeColors) =>
     sectionTitle: {
       fontSize: 22,
       fontWeight: "bold",
-      color: colors.text,
+      color: colors.shadow,
       marginBottom: 4,
     },
     sectionSubtitle: {
       fontSize: 14,
-      color: colors.textSecondary,
+      color: colors.shadow,
     },
     listContent: {
       paddingHorizontal: 20,

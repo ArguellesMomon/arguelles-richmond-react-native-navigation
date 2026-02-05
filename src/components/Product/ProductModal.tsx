@@ -74,7 +74,7 @@ export default function ProductModal({
               ]}
               onPress={onClose}
             >
-              <Ionicons name="close" size={24} color={colors.text} />
+              <Ionicons name="close" size={24} color={colors.shadow} />
             </Pressable>
           </View>
 
@@ -151,14 +151,14 @@ export default function ProductModal({
                     <Ionicons
                       name="shield-checkmark"
                       size={18}
-                      color={colors.primary}
+                      color={colors.shadow}
                     />
                   </View>
                   <Text style={styles.featureText}>1 Year Warranty</Text>
                 </View>
                 <View style={styles.featureItem}>
                   <View style={styles.featureIconContainer}>
-                    <Ionicons name="car" size={18} color={colors.primary} />
+                    <Ionicons name="car" size={18} color={colors.shadow} />
                   </View>
                   <Text style={styles.featureText}>Free Shipping</Text>
                 </View>
@@ -167,7 +167,7 @@ export default function ProductModal({
                     <Ionicons
                       name="arrow-back"
                       size={18}
-                      color={colors.primary}
+                      color={colors.shadow}
                     />
                   </View>
                   <Text style={styles.featureText}>30-Day Return Policy</Text>
@@ -177,7 +177,7 @@ export default function ProductModal({
                     <Ionicons
                       name="checkmark-circle"
                       size={18}
-                      color={colors.primary}
+                      color={colors.shadow}
                     />
                   </View>
                   <Text style={styles.featureText}>100% Authentic</Text>

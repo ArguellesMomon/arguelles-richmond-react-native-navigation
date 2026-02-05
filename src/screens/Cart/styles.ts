@@ -5,7 +5,7 @@ export const createStyles = (colors: ThemeColors) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: colors.background,
+      backgroundColor: colors.card,
     },
 
     // ===== HEADER =====
@@ -48,7 +48,7 @@ export const createStyles = (colors: ThemeColors) =>
       transform: [{ scale: 0.97 }],
     },
     clearButtonText: {
-      color: colors.danger,
+      color: colors.shadow,
       fontSize: 14,
       fontWeight: "600",
     },
@@ -119,7 +119,7 @@ export const createStyles = (colors: ThemeColors) =>
     deleteSelectedText: {
       fontSize: 13,
       fontWeight: "600",
-      color: colors.danger,
+      color: colors.shadow,
     },
 
     // ===== LIST =====

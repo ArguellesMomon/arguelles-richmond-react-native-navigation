@@ -11,29 +11,29 @@ interface ThemeContextType {
 }
 
 const lightColors: ThemeColors = {
-  background: '#F5F5F5',
-  card: '#FFFFFF',
-  text: '#212121',
-  textSecondary: '#666666',
-  border: '#E0E0E0',
-  primary: '#2196F3',
-  primaryDark: '#1976D2',
-  success: '#4CAF50',
-  danger: '#F44336',
-  shadow: '#000000',
+  background: '#ff7631',        // Light orange-tinted white
+  card: '#FFFFFF',              // Pure white
+  text: '#1A1A1A',              // Almost black
+  textSecondary: '#666666',     // Gray
+  border: '#ecc3b4',            // Light orange border
+  primary: '#FF6B35',           // Vibrant orange
+  primaryDark: '#E85A2A',       // Darker orange
+  success: '#FF8C42',           // Orange success
+  danger: '#D9534F',            // Red-orange danger
+  shadow: '#ffffff',            // Black shadow
 };
 
 const darkColors: ThemeColors = {
-  background: '#121212',
-  card: '#1E1E1E',
-  text: '#FFFFFF',
-  textSecondary: '#B0B0B0',
-  border: '#333333',
-  primary: '#90CAF9',
-  primaryDark: '#64B5F6',
-  success: '#81C784',
-  danger: '#E57373',
-  shadow: '#000000',
+  background: '#0A0A0A',        // True black
+  card: '#1A1A1A',              // Dark gray-black
+  text: '#FFFFFF',              // White text
+  textSecondary: '#B0B0B0',     // Light gray
+  border: '#2A2A2A',            // Dark border
+  primary: '#FF6B35',           // Vibrant orange (same as light)
+  primaryDark: '#FF8C42',       // Lighter orange for dark mode
+  success: '#FF8C42',           // Orange success
+  danger: '#FF6B6B',            // Lighter red for dark mode
+  shadow: '#ffffff',            // Black shadow
 };
 
 const ThemeContext = createContext<ThemeContextType>({} as ThemeContextType);
