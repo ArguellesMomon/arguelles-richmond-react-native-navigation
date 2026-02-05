@@ -270,12 +270,12 @@ export const createStyles = (colors: ThemeColors) =>
     paymentTitle: {
       fontSize: 16,
       fontWeight: "bold",
-      color: colors.card,
+      color: colors.shadow,
       marginBottom: 4,
     },
     paymentSubtitle: {
       fontSize: 13,
-      color: colors.card,
+      color: colors.shadow,
     },
     radioButton: {
       width: 24,

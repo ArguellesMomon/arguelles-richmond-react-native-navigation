@@ -122,7 +122,7 @@ export const createStyles = (colors: ThemeColors) =>
     ratingText: {
       fontSize: 15,
       fontWeight: "600",
-      color: colors.text,
+      color: colors.shadow,
     },
     reviewCount: {
       fontSize: 14,

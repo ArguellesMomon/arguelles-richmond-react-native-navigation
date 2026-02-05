@@ -129,7 +129,7 @@ export default function ProductCard({ product, onPress }: ProductCardProps) {
     ratingText: {
       fontSize: 13,
       fontWeight: "600",
-      color: colors.text,
+      color: colors.shadow,
     },
   });
 
