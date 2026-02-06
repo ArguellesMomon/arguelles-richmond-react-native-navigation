@@ -425,7 +425,7 @@ export default function CartScreen({ navigation }: any) {
 
           {selectedSubtotal < FREE_SHIPPING_THRESHOLD && selectedSubtotal > 0 && (
             <View style={styles.freeShippingContainer}>
-              <Ionicons name="gift" size={16} color={colors.success} />
+              <Ionicons name="gift" size={16} color={colors.shadow} />
               <Text style={styles.freeShippingNote}>
                 Add ₱{(FREE_SHIPPING_THRESHOLD - selectedSubtotal).toFixed(2)} more for FREE shipping!
               </Text>

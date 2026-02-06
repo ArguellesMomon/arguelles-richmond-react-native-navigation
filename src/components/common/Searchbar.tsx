@@ -13,7 +13,7 @@ import { useTheme } from "../../context/ThemeContext";
 import { createStyles } from "./styles";
 
 export interface FilterOptions {
-  sortBy: "name" | "priceLow" | "priceHigh";
+  sortBy: "name" | "priceLow" | "priceHigh" | "newest";
   priceRange: "all" | "under500" | "500to1000" | "over1000";
 }
 
@@ -27,6 +27,7 @@ const SORT_OPTIONS = [
   { id: "name", label: "Name (A-Z)", icon: "text-outline" },
   { id: "priceLow", label: "Price: Low to High", icon: "arrow-up-outline" },
   { id: "priceHigh", label: "Price: High to Low", icon: "arrow-down-outline" },
+  { id: "newest", label: "Newest First", icon: "time-outline" },
 ];
 
 const PRICE_RANGES = [
@@ -149,7 +150,10 @@ export default function SearchBar({
             returnKeyType="search"
           />
         ) : (
-          <Pressable style={{ flex: 1 }} onPress={activateSearch}>
+          <Pressable 
+            style={styles.placeholderContainer} 
+            onPress={activateSearch}
+          >
             <Text style={styles.placeholder}>
               {searchQuery || placeholder}
             </Text>
@@ -258,7 +262,7 @@ export default function SearchBar({
                     ))}
 
                     {/* Price Range Section */}
-                    <Text style={[styles.sectionTitle, { marginTop: 10 }]}>
+                    <Text style={[styles.sectionTitle, { marginTop: 24 }]}>
                       Price Range
                     </Text>
                     {PRICE_RANGES.map((range) => (

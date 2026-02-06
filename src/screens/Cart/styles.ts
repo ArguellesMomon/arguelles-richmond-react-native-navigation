@@ -411,7 +411,7 @@ export const createStyles = (colors: ThemeColors) =>
       gap: 8,
     },
     freeBadge: {
-      backgroundColor: colors.success,
+      backgroundColor: colors.primary,
       paddingHorizontal: 8,
       paddingVertical: 3,
       borderRadius: 8,
@@ -439,7 +439,7 @@ export const createStyles = (colors: ThemeColors) =>
     freeShippingNote: {
       flex: 1,
       fontSize: 13,
-      color: colors.success,
+      color: colors.shadow,
       fontWeight: "600",
     },
     divider: {

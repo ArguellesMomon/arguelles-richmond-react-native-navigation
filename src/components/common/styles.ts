@@ -16,16 +16,25 @@ export const createStyles = (colors: ThemeColors, isSearchActive: boolean = fals
     searchIcon: {
       marginRight: 8,
     },
+    placeholderContainer: {
+      flex: 1,
+      justifyContent: "center",
+    },
     input: {
       flex: 1,
       fontSize: 15,
       color: colors.text,
       padding: 0,
+      margin: 0,
+      includeFontPadding: false,
+      textAlignVertical: "center",
     },
     placeholder: {
-      flex: 1,
       fontSize: 15,
       color: colors.textSecondary,
+      includeFontPadding: false,
+      textAlignVertical: "center",
+      paddingVertical: 0,
     },
     clearButton: {
       marginRight: 8,
@@ -83,13 +92,13 @@ export const createStyles = (colors: ThemeColors, isSearchActive: boolean = fals
       paddingHorizontal: 12,
       paddingVertical: 6,
       borderRadius: 8,
-      backgroundColor: colors.card,
+      backgroundColor: colors.background,
       borderWidth: 1,
       borderColor: colors.border,
     },
     resetButtonText: {
       fontSize: 14,
-      color: colors.primary,
+      color: colors.shadow,
       fontWeight: "600",
     },
     sectionTitle: {
@@ -126,7 +135,7 @@ export const createStyles = (colors: ThemeColors, isSearchActive: boolean = fals
     },
     optionIconSelected: {
       backgroundColor: colors.primary,
-      borderColor: colors.card,
+      borderColor: colors.primary,
     },
     optionLabel: {
       flex: 1,
@@ -144,13 +153,13 @@ export const createStyles = (colors: ThemeColors, isSearchActive: boolean = fals
       alignItems: "center",
     },
     radioButtonSelected: {
-      borderColor: colors.card,
+      borderColor: colors.shadow,
     },
     radioButtonInner: {
       width: 12,
       height: 12,
       borderRadius: 6,
-      backgroundColor: colors.card,
+      backgroundColor: colors.shadow,
     },
     applyButton: {
       backgroundColor: colors.primary,

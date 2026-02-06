@@ -26,16 +26,12 @@ interface FormData {
   fullName: string;
   phone: string;
   address: string;
-  city: string;
-  postalCode: string;
 }
 
 interface FormErrors {
   fullName?: string;
   phone?: string;
   address?: string;
-  city?: string;
-  postalCode?: string;
 }
 
 export default function CheckoutScreen({ navigation, route }: any) {
@@ -56,8 +52,6 @@ export default function CheckoutScreen({ navigation, route }: any) {
     fullName: "",
     phone: "",
     address: "",
-    city: "",
-    postalCode: "",
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
@@ -74,12 +68,6 @@ export default function CheckoutScreen({ navigation, route }: any) {
   const validatePhone = (phone: string): boolean => {
     const phoneRegex = /^(09|\+639)\d{9}$/;
     return phoneRegex.test(phone.replace(/\s/g, ""));
-  };
-
-  // Validate postal code (Philippine format)
-  const validatePostalCode = (code: string): boolean => {
-    const postalRegex = /^\d{4}$/;
-    return postalRegex.test(code);
   };
 
   // Validate all form fields
@@ -102,16 +90,6 @@ export default function CheckoutScreen({ navigation, route }: any) {
       newErrors.address = "Address is required";
     } else if (formData.address.trim().length < 10) {
       newErrors.address = "Please enter a complete address";
-    }
-
-    if (!formData.city.trim()) {
-      newErrors.city = "City is required";
-    }
-
-    if (!formData.postalCode.trim()) {
-      newErrors.postalCode = "Postal code is required";
-    } else if (!validatePostalCode(formData.postalCode)) {
-      newErrors.postalCode = "Please enter a valid 4-digit postal code";
     }
 
     setErrors(newErrors);
@@ -461,8 +439,6 @@ export default function CheckoutScreen({ navigation, route }: any) {
             {renderFormField("fullName", "Full Name", "Juan Dela Cruz", "person-outline")}
             {renderFormField("phone", "Phone Number", "09123456789", "call-outline", "phone-pad")}
             {renderFormField("address", "Address", "House No., Street, Barangay", "home-outline", "default", true)}
-            {renderFormField("city", "City", "Manila", "location-outline")}
-            {renderFormField("postalCode", "Postal Code", "1000", "business-outline", "number-pad")}
           </View>
 
           {/* Payment Methods */}
